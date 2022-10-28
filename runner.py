@@ -1,3 +1,4 @@
+import random
 from src.guest import Guest
 from src.karaoke_bar import KaraokeBar
 from src.room import Room
@@ -6,39 +7,11 @@ from src.song import Song
 the_bar = KaraokeBar("Dumble's Disco", 500.00, 5.50)
 
 rooms = [
-    Room("One", "Easy", 10),
-    Room("Two", "Fun", 1),
-    Room("Three", "90s", 1),
-    Room("Four", "Ballads", 1),
+    Room("One", "Easy", 2),
+    Room("Two", "Fun", 2),
+    Room("Three", "90s", 2),
+    Room("Four", "Ballads", 2),
 ]
-
-""" song1 = Song("500 miles", "The Proclaimers", "Easy")
-song2 = Song("Happy", "Pharrell Williams", "Easy")
-song3 = Song("Copacabana", "Barry Manilow", "Easy")
-song4 = Song("MMMBop", "Hanson", "Fun")
-song5 = Song("If You Like Pina Coladas", "Jimmy Buffet", "Fun")
-song6 = Song("Tubthumping", "Chumbawamba", "Fun")
-song7 = Song("Time of your life", "Greenday", "90s")
-song8 = Song("Getting jiggy with it", "Will Smith", "90s")
-song9 = Song("Don't speak", "No doubt", "90s")
-song10 = Song("I will always love you", "Whitney Houston", "Ballads")
-song11 = Song("Someone like you", "Adele", "Ballads")
-song12 = Song("My heart will go on", "Celine Dion", "Ballads")
-
-songs = [
-    song1,
-    song2,
-    song3,
-    song4,
-    song5,
-    song6,
-    song7,
-    song8,
-    song9,
-    song10,
-    song11,
-    song12,
-] """
 
 songs = [
     Song("500 miles", "The Proclaimers", "Easy"),
@@ -57,8 +30,8 @@ songs = [
 
 guests = [
     Guest("Ron", songs[7], 100),
-    Guest("Harry", songs[5], 100),
-    Guest("Hermione", songs[11], 100),
+    Guest("Harry", songs[4], 100),
+    Guest("Hermione", songs[10], 100),
 ]
 
 [
@@ -68,4 +41,34 @@ guests = [
     if song.theme == room.theme
 ]
 
-[print(room.name, room.songs) for room in rooms]
+
+print(f"\nWelcome to {the_bar.name}!\n")
+
+[print(the_bar.guest_entry(guest)) for guest in guests]
+print("")
+
+for guest in guests:
+    rand_room = rooms[random.randint(0, (len(rooms) - 1))]
+    print(rand_room.add_guest_to_room(guest, rand_room))
+print("")
+
+[print(room.remove_guest_from_room(guest)) for room in rooms for guest in room.guests]
+[print(room.remove_guest_from_room(guest)) for room in rooms for guest in room.guests]
+print("")
+
+print(f"Ron: Any fancy a duet?")
+rand_dueter = guests[random.randint(1, 2)]
+print(f"{rand_dueter.name}: Come on then.")
+print("")
+
+print(
+    f"Ron & {rand_dueter.name}: 'Islands in the stream, that is what we are, and we rely on each other, ahhaaaaaa!"
+)
+if rand_dueter.name == "Harry":
+    print("Hermione: Oh no!!!")
+else:
+    print("Harry: Oh no!!!!")
+
+print("\n\n")
+print("                                 FIN")
+print("\n\n\n")

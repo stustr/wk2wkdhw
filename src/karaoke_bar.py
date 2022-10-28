@@ -13,3 +13,4 @@ class KaraokeBar:
     def guest_entry(self, guest):
         self.till += self.entry_fee
         guest.pay_entry(self.entry_fee)
+        return f"In goes {guest.name}. Chhching!!! Till: ${self.till}"

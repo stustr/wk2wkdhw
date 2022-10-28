@@ -16,7 +16,10 @@ class Room:
         if self.check_capacity():
             self.guests.append(guest)
             guest.position = room
-            print(guest.check_favourite_song())
+            return guest.check_favourite_song(room)
+        else:
+            return f"{guest.name}: Full! Hurry up!"
 
     def remove_guest_from_room(self, guest):
         self.guests.remove(guest)
+        return f"{guest.name} left room {self.name}"
