@@ -12,6 +12,34 @@ rooms = [
     Room("Four", "Ballads", 1),
 ]
 
+""" song1 = Song("500 miles", "The Proclaimers", "Easy")
+song2 = Song("Happy", "Pharrell Williams", "Easy")
+song3 = Song("Copacabana", "Barry Manilow", "Easy")
+song4 = Song("MMMBop", "Hanson", "Fun")
+song5 = Song("If You Like Pina Coladas", "Jimmy Buffet", "Fun")
+song6 = Song("Tubthumping", "Chumbawamba", "Fun")
+song7 = Song("Time of your life", "Greenday", "90s")
+song8 = Song("Getting jiggy with it", "Will Smith", "90s")
+song9 = Song("Don't speak", "No doubt", "90s")
+song10 = Song("I will always love you", "Whitney Houston", "Ballads")
+song11 = Song("Someone like you", "Adele", "Ballads")
+song12 = Song("My heart will go on", "Celine Dion", "Ballads")
+
+songs = [
+    song1,
+    song2,
+    song3,
+    song4,
+    song5,
+    song6,
+    song7,
+    song8,
+    song9,
+    song10,
+    song11,
+    song12,
+] """
+
 songs = [
     Song("500 miles", "The Proclaimers", "Easy"),
     Song("Happy", "Pharrell Williams", "Easy"),
