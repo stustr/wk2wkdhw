@@ -1,8 +1,5 @@
-from unicodedata import name
-
-
 class Guest:
-    def __init__(self, name: str, fav_song, money: int) -> None:
+    def __init__(self, name: str, fav_song, money: float) -> None:
         self.name = name
         self.fav_song = fav_song
         self.money = money
