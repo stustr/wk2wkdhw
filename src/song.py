@@ -3,3 +3,7 @@ class Song:
         self.title = title
         self.artist = artist
         self.theme = theme
+        return
+    
+    def __repr__(self) -> str:
+        return f"{self.title} by {self.artist}"
