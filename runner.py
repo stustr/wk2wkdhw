@@ -56,7 +56,7 @@ print("")
 [print(room.remove_guest_from_room(guest)) for room in rooms for guest in room.guests]
 print("")
 
-print(f"Ron: Any fancy a duet?")
+print(f"Ron: Anyone fancy a duet?")
 rand_dueter = guests[random.randint(1, 2)]
 print(f"{rand_dueter.name}: Come on then.")
 print("")
